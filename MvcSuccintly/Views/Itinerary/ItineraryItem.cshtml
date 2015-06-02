@@ -1,0 +1,19 @@
+﻿@model MvcSuccintly.Models.ItineraryItem
+
+<p>
+    @Html.LabelFor(m => m.Duration)
+    @Html.EditorFor(m => m.Duration)
+    @Html.ValidationMessageFor(m => m.Duration)
+</p>
+
+<p>
+    @Html.LabelFor(m => m.IsActive)
+    @Html.EditorFor(m => m.IsActive)
+    @Html.ValidationMessageFor(m => m.IsActive)
+</p>
+
+<p>
+    @Html.LabelFor(m => m.Confirmed)
+    @Html.EditorFor(m => m.Confirmed)
+    @Html.ValidationMessageFor(m => m.Confirmed)
+</p>

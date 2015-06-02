@@ -1,0 +1,57 @@
+﻿@model string
+
+@{
+    var areaCode = string.Empty;
+    var firstNumber = string.Empty;
+    var secondNumber = string.Empty;
+    if (Model != null)
+    {
+        areaCode = Model.Substring(0, 3);
+        firstNumber = Model.Substring(3, 3);
+        if (Model.Length >= 10) 
+        {
+            secondNumber = Model.Substring(6, 4);
+        }
+    }
+}
+
+<input type="text" name="area_code" id="area_code" maxlength="3" size="3" value="@areaCode" />
+<input type="text" name="first_n" id="first_n" maxlength="3" size="3" value="@firstNumber" />
+<input type="text" name="last_n" id="last_n" maxlength="4" size="5" value="@secondNumber" />
+<input type="hidden" name="@ViewData.TemplateInfo.HtmlFieldPrefix" id="@ViewData.TemplateInfo.HtmlFieldPrefix" value="@Model" />
+<img src="../../../Content/images/Edit32.png" id="phoneNumberEdit" />
+<input type="text" name="unparsed" id="unparsed" />
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#unparsed").hide();
+        var edit = $("#phoneNumberEdit");
+        edit.click(function () { $("#unparsed").toggle(); })
+        var phone = $("#area_code, #first_n, #last_n");
+        phone.autotab_magic().autotab_filter('numeric');
+
+        $("#unparsed").change(function () {
+            var unparsed = $("#unparsed");
+            var value = unparsed.val();
+
+            value = value.replace(/\(|\)|\s|\-/gi, '');
+            value = value.replace(/[a-zA-Z]+/gi, '');
+            unparsed.val(value);
+            ("#area_code").val(value.substring(0, 3));
+            ("#first_n").val(value.substring(3, 6));
+            ("#last_n").val(value.substring(6, 10));
+            if (value.length == 10)
+                unparsed.hide();
+            var result = ($("#area_code").val()
+                + $("#first_n").val()
+                + $("#last_n").val());
+            $("#@ViewData.TemplateInfo.HtmlFieldPrefix").val(result);
+        });
+
+        phone.blur(function () {
+            var result = ($("#area_code").val()
+                + $("#first_n").val()
+                + $("#last_n").val());
+            $("#@ViewData.TemplateInfo.HtmlFieldPrefix").val(result);
+        });
+    });
+</script>

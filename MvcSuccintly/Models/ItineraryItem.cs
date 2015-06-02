@@ -16,5 +16,7 @@ namespace MvcSuccintly.Models
 
         public bool IsActive { get; set; }
         public bool? Confirmed { get; set; }
+        [UIHint("Phone")]
+        public string ContactNumber { get; set; }
     }
 }

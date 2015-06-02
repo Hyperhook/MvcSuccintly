@@ -306,6 +306,8 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Itinerary\Create.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Phone.cshtml" />
+    <Content Include="Views\Itinerary\ItineraryItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
