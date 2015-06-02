@@ -81,6 +81,5 @@ D:\Programming\visual_studio_projects\test\MvcSuccintly\MvcSuccintly\bin\ko\Syst
 D:\Programming\visual_studio_projects\test\MvcSuccintly\MvcSuccintly\bin\ru\System.Spatial.resources.dll
 D:\Programming\visual_studio_projects\test\MvcSuccintly\MvcSuccintly\bin\zh-Hans\System.Spatial.resources.dll
 D:\Programming\visual_studio_projects\test\MvcSuccintly\MvcSuccintly\bin\zh-Hant\System.Spatial.resources.dll
-D:\Programming\visual_studio_projects\test\MvcSuccintly\MvcSuccintly\obj\Debug\MvcSuccintly.csprojResolveAssemblyReference.cache
 D:\Programming\visual_studio_projects\test\MvcSuccintly\MvcSuccintly\obj\Debug\MvcSuccintly.dll
 D:\Programming\visual_studio_projects\test\MvcSuccintly\MvcSuccintly\obj\Debug\MvcSuccintly.pdb
